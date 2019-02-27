@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+
+  elasticsearch:
+    image: jupyter/base-notebook
+    container_name: jupyter
+    ports:
+    - 8888:8888
+#     networks:
+#     - host
+
+# networks:
+#   host:
+#     name: host
+#     driver: host
