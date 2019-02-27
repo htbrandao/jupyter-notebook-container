@@ -2,15 +2,12 @@ version: '3.5'
 
 services:
 
-  elasticsearch:
+  jupyter:
     image: jupyter/base-notebook
     container_name: jupyter
+    volumes:
+    - /tmp/jupyter:/home/jupyter/
     ports:
-    - 8888:8888
-#     networks:
-#     - host
-
-# networks:
-#   host:
-#     name: host
-#     driver: host
+    - 8889:8888
+    command:
+      jupyter-notebook --NotebookApp.token='' --NotebookApp.password=''
