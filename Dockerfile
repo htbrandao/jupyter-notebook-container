@@ -1,26 +1,24 @@
-FROM jupyter/base-notebook
+FROM ubuntu:18.04
 
-USER root
+RUN apt-get update
+RUN apt-get install -y git
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
 
-WORKDIR /
 COPY ./requirements.txt /
-
-RUN apt update -y
-
-RUN apt install python3 -y
-RUN apt install git -y
-RUN apt isntall python3-pip -y
-
 RUN pip3 install -r requirements.txt
 
 RUN rm -rf /root/.cache/pip/*
 RUN apt autoremove -y
+
 RUN apt clean
 RUN rm -rf /usr/local/src/*
 
-RUN mkdir -p /notebooks/data/input
-RUN mkdir -p /notebooks/data/output
+RUN adduser datascientist
+USER datascientist
 
-EXPOSE 8889
+RUN mkdir -p /home/datascientist/notebooks/data/input
+RUN mkdir -p /home/datascientist/notebooks/data/output
+WORKDIR /home/datascientist/notebooks
 
-CMD [ "jupyter-notebook" ]
+CMD jupyter notebook --no-browser --ip 0.0.0.0 --port 8888 --NotebookApp.password='' --NotebookApp.token='' /home/datascientist
