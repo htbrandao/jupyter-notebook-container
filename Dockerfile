@@ -1,10 +1,3 @@
-# FROM ubuntu:18.04
-
-# RUN apt-get update
-# RUN apt-get install -y git
-# RUN apt-get install -y python3
-# RUN apt-get install -y python3-pip
-
 FROM python:3.6.8-alpine3.9
 
 # RUN adduser datascientist
