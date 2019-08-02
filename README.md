@@ -13,9 +13,3 @@ $ docker pull hbrandao/jupyter:latest
 // Run it
 $ docker run -p $LOCALHOST_PORT:8888 --name $CONTAINER_NAME -d $IMAGE_NAME:$IMAGE_TAG
 ```
-
-TODO || FIXME
-
-    1- Smaller image
-    2- Cluster?
-    3- Password protected?
