@@ -34,5 +34,4 @@ To install more dependencies, you can add it to ```requirements.txt``` before bu
 $ pip3 install $LIB_NAME
 ```
 
-## Enjoy!
-U+220E
+##### Enjoy! &#8718;
