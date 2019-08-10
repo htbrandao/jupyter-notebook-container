@@ -35,4 +35,4 @@ $ pip3 install $LIB_NAME
 ```
 
 ## Enjoy!
-&#8718
+U+220E
