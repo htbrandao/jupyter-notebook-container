@@ -2,7 +2,7 @@
 
 My own implementation of a Jupyter Notebook container: https://hub.docker.com/r/hbrandao/jupyter
 
-## Running
+# # Running
 
 ```bash
 // Build your image
@@ -15,7 +15,7 @@ $ docker pull hbrandao/jupyter:1.0.0
 $ docker run -p $LOCALHOST_PORT:8888 --name $CONTAINER_NAME -d $IMAGE_NAME:$IMAGE_TAG
 ```
 
-## Libraries
+# # Libraries
 
 The image will be loaded with the following "```$LIB_NAME==$VERSION```"
 
